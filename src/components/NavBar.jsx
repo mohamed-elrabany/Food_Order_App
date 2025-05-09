@@ -23,17 +23,17 @@ export default function NavBar(){
     return(
         <nav className="flex justify-between items-center p-8 absolute top-0 left-0 right-0">
                 <motion.img 
-                initial={{opacity:0, x:-40}}
-                animate={{opacity:1, x:0}}
-                transition={{duration:1, ease:"easeInOut"}}
+                initial={{opacity:0}}
+                animate={{opacity:1}}
+                transition={{duration:1.5, ease:"easeInOut"}}
                 className="object-cover w-24 lg:w-auto"
                 src={logo} alt="Brand Logo" />
 
 
             <motion.nav 
-            initial={{opacity:0, x:30}}
-            animate={{opacity:1, x:0}}
-            transition={{duration:1, ease:"easeInOut"}}
+            initial={{opacity:0}}
+            animate={{opacity:1}}
+            transition={{duration:1.5, ease:"easeInOut"}}
             onClick={handleShowCart}
              className="flex justify-center items-center gap-2 lg:gap-4 border-2 border-creamy transition duration-300 px-1 py-3 lg:px-2 lg:py-4 cursor-pointer">
                 <FaBasketShopping size={30} className="text-creamy" />

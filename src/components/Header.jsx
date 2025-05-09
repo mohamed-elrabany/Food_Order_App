@@ -12,7 +12,7 @@ export default function Header(){
             <motion.div 
             initial={{opacity:0}}
             animate={{opacity:1}}
-            transition={{duration:1.5, ease:"easeInOut"}}
+            transition={{duration:1.5, ease:"easeInOut", delay:0.5}}
             className="flex flex-col gap-6 px-8 h-full items-center justify-center">
                 <p className="font-light text-creamy font-Caramel lg:text-4xl
                 text-3xl">
