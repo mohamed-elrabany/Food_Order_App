@@ -3,12 +3,13 @@ import useHttp from "../hooks/useHttp";
 import Error from "./Error";
 
 const requestConfig={};
+const Meals_API=import.meta.env.VITE_API_MEALS_URL;
 export default function Meals(){
     const {
         data: loadedMeals,
         isLoading,
         error
-        }= useHttp('http://localhost:3000/meals', requestConfig, []);
+        }= useHttp({Meals_API}, requestConfig, []);
 
     if(isLoading){
         return <p className="center">Fetching meals...</p>
