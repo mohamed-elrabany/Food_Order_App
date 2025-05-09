@@ -15,8 +15,9 @@ const requestConfig = {
   },
 };
 
-const order_API=import.meta.env.VITE_API_ORDERS_URL;
 export default function Checkout({}) {
+  
+  const API=import.meta.env.VITE_API_BACKEND_URL;  
   const cartCtx = useContext(CartContext);
   const cartTotalPrice = cartCtx.items.reduce(
     (total, item) => total + item.quantity * item.price,
@@ -25,7 +26,7 @@ export default function Checkout({}) {
   const userProgressCtx = useContext(UserProgressContext);
 
   const { data, error, sendRequest, clearData } = useHttp(
-    {order_API},
+    `${API}/orders`,
     requestConfig
   );
 

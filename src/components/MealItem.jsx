@@ -10,12 +10,12 @@ export default function MealItem({meal}){
         cartCtx.addItem(meal);
     }
     
-    const Images_API=import.meta.env.VITE_API_IMAGES_URL;
+    const Images_API=import.meta.env.VITE_API_BACKEND_URL;
     return <li 
         className="flex flex-col bg-[#1d1a16] overflow-hidden shadow-lg justify-center items-center gap-2 lg:gap-4 w-full max-h-[34rem]  md:max-h-[44rem] text-center">
         <img
         className="w-full h-[15rem] lg:h-[20rem] object-cover aspect-[4/6]"
-        src={`${Images_API}${meal.image}`}
+        src={`${Images_API}/${meal.image}`}
         alt={"Meal-" + meal.name}
         />
         <div className="flex flex-col gap-6 justify-start items-center px-3 py-1 lg:px-4 lg:py-2 w-full h-[13rem]">
