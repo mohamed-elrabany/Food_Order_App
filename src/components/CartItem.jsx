@@ -5,7 +5,7 @@ export default function CartItem({name, quantity, price, onIncreae, onDecrease, 
   return (
         <li className="flex justify-between items-center px-4 py-6 text-sm lg:text-base">
             <div className="flex justify-center items-center gap-4">
-              <img src={`${API}/${image}`} className="w-16 h-16 object-cover rounded-full" alt="" />
+              <img src={`${API}${image}`} className="w-16 h-16 object-cover rounded-full" alt="" />
               <p>
                 {name} - {quantity} X {currencyFormatter.format(price)}
               </p>  

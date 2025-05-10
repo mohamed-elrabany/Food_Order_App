@@ -26,7 +26,7 @@ export default function Checkout({}) {
   const userProgressCtx = useContext(UserProgressContext);
 
   const { data, error, sendRequest, clearData } = useHttp(
-    `${API}/orders`,
+    `${API}orders`,
     requestConfig
   );
 
